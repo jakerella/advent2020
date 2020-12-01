@@ -3,7 +3,7 @@ from helpers import read_data_file
 
 print('\n************* Day 01 *************\n')
 
-expenses = list(map(lambda n: int(n), read_data_file(sys.argv[1])))
+expenses = read_data_file(sys.argv[1], convert=int)
 answer = None
 
 for i in range(len(expenses)):
