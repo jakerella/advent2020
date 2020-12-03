@@ -30,7 +30,7 @@ def part2():
         else:
             validCount = validCount + 1
 
-    print('Part 1:', validCount)
+    print('Part 2:', validCount)
 
 
 def formatEntry(entry):

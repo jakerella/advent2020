@@ -9,6 +9,8 @@ def read_data_file(filename, method='lines', convert=None):
                     data.append(line)
                 elif (method == 'comma'):
                     data.append(line.split(','))
+                elif (method == 'char'):
+                    data.append([char for char in line])
                 else:
                     raise ValueError('Invalid parse method')
 
@@ -26,5 +28,5 @@ def read_data_file(filename, method='lines', convert=None):
             return data
 
     except Exception as err:
-        print('ERROR reading file', filename)
+        print('ERROR reading/parsing file', filename)
         print(err)
